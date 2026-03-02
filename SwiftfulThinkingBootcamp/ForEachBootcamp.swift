@@ -9,7 +9,14 @@ import SwiftUI
 
 struct ForEachBootcamp: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        let data: [String] = ["One", "Two", "Three"]
+
+        VStack {
+            ForEach(data, id: \.self) { item in
+                Text(item)
+            }
+        }
     }
 }
 
